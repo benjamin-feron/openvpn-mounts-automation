@@ -1,0 +1,11 @@
+[Unit]
+Description=Share 01
+
+[Mount]
+What=//server/path_to_share01
+Where=/media/share01
+Type=cifs
+Options=_netdev,sec=ntlmv2,uid=1000,gid=1000,credentials=/path_to_credentials_file
+
+[Install]
+WantedBy=multi-user.target

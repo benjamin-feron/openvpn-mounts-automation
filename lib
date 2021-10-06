@@ -1,0 +1,22 @@
+throw_error () {
+	MSG=$1
+	EXIT=$2
+	STD_MSG="Command stopped"
+	printf "\033[0;31m$MSG\033[0m\n"
+	echo "$STD_MSG"
+	if $EXIT ; then
+		exit 1
+	fi
+}
+
+systemd_file () {
+	echo "$1" | sed "s/\//-/g" | sed "s/^-\(.*\)/\1/"
+}
+
+reverse_array () {
+	declare -n arr="$1" rev="$2"
+	for i in "${arr[@]}"
+		do
+		rev=("$i" "${rev[@]}")
+	done
+}

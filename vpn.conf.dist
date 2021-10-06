@@ -1,0 +1,2 @@
+OPENVPN_CONFIG=/etc/openvpn/client/client.conf
+PID_FILE=/var/run/openvpn-cust.pid

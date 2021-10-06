@@ -1,0 +1,8 @@
+[Unit]
+Description=Share 01
+
+[Automount]
+Where=/media/share01
+
+[Install]
+WantedBy=multi-user.target
